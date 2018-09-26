@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body>
+        <a v-bind:href="urlPasswordChange" target="_blank">
+                ¿Has olvidado tu contraseña?
+                </a>
+   
+    <div class="container">
+ <div id="app">
+    <div id="b-project" v-for="project in projects"> <!--cada proyecto en proyectos (mi arreglo)-->
+        {{project.title}}
+        <hr>
+        {{project.description}}
+
+    </div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script>
+    
+    var app = new Vue({
+        el: '#app',
+        data:{
+            projects:[  //arreglo  de proyectos
+                {
+                    title: 'Trabajando con Vue',
+                    description: 'Descripccion'
+                },
+                {
+                    title: 'Trabajando con Vue 2',
+                    description: 'Descripccion 2'
+                },
+                {
+                    title: 'Trabajando con Vue 3',
+                    description: 'Descripccion 3'
+                }
+            ]
+        }
+    })
+    
+    </script>
+
+</body>
+</html>
